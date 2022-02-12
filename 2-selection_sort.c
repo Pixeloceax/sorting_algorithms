@@ -1,36 +1,36 @@
 #include "sort.h"
 /**
- *swap - function
- *@xp: V
- *@yp: V
- */
-void swap(int *xp, int *yp)
-{
-	int temp = *xp;
-	*xp = *yp;
-	*yp = temp;
-}
-
-/**
  * selection_sort - function
  *@array: V
  *@size: V
  */
 void selection_sort(int *array, size_t size)
 {
-	unsigned long int i, j, min_idx;
+	unsigned long int i, j, index;
 
 	for (i = 0; i < size - 1; i++)
 	{
-		min_idx = i;
+		index = i;
 		for (j = i + 1; j < size; j++)
 		{
-			if (array[j] < array[min_idx])
+			if (array[j] < array[index])
 			{
-				min_idx = j;
+				index = j;
 			}
 		}
-		swap(&array[min_idx], &array[i]);
+		swap(&array[index], &array[i]);
 		print_array(array, size);
 	}
+}
+
+/**
+ *swap - swap two elements
+ *@a: a value
+ *@b: b value
+ */
+void swap(int *a, int *b)
+{
+	int temp = *a;
+	*a = *b;
+	*b = temp;
 }
