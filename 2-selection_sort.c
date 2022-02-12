@@ -1,8 +1,8 @@
 #include "sort.h"
 /**
- * selection_sort - function
- *@array: V
- *@size: V
+ * selection_sort - selection sort
+ *@array: array
+ *@size: size of array
  */
 void selection_sort(int *array, size_t size)
 {
