@@ -29,7 +29,8 @@ void selection_sort(int *array, size_t size)
 				index = j;
 			}
 		}
-		swap(&array[index], &array[i]);
-		print_array(array, size);
+		if(index != i)
+			swap(&array[index], &array[i]);
+			print_array(array, size);
 	}
 }
