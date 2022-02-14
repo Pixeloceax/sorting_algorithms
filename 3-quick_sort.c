@@ -1,19 +1,5 @@
 #include "sort.h"
 /**
- *quick_sort - quick sort
- * @array: array
- * @size: size of array
- */
-void quick_sort(int *array, size_t size)
-{
-	if (array == NULL || size < 2)
-	{
-		return;
-	}
-	sort(array, 0, size - 1, size);
-}
-
-/**
  *Lomuto_partition_scheme - This function takes last element as pivot, places
  *the pivot element at its correct position in sorted array,
  *and places all smaller to left of pivot and all
@@ -80,5 +66,17 @@ void sort(int *array, int low, int high, size_t size)
 		sort(array, low, i - 1, size);
 		sort(array, i + 1, high, size);
 	}
-
+}
+/**
+ *quick_sort - quick sort
+ * @array: array
+ * @size: size of array
+ */
+void quick_sort(int *array, size_t size)
+{
+	if (array == NULL || size < 2)
+	{
+		return;
+	}
+	sort(array, 0, size - 1, size);
 }

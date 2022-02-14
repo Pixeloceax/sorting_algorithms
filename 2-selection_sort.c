@@ -1,5 +1,4 @@
 #include "sort.h"
-
 /**
  *swap - swap two elements
  *@a: a value
