@@ -9,7 +9,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *k = *list;
 	listint_t *i = *list;
 
-	if (k == NULL || i == NULL || *list == NULL)
+	if (NULL)
 	{
 		return;
 	}
