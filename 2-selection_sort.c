@@ -1,9 +1,5 @@
 #include "sort.h"
-/**
- * selection_sort - selection sort
- *@array: array
- *@size: size of array
- */
+
 /**
  *swap - swap two elements
  *@a: a value
@@ -15,7 +11,11 @@ void swap(int *a, int *b)
 	*a = *b;
 	*b = temp;
 }
-
+/**
+ * selection_sort - selection sort
+ *@array: array
+ *@size: size of array
+ */
 void selection_sort(int *array, size_t size)
 {
 	unsigned long int i, j, index;
