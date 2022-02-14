@@ -2,6 +2,7 @@
 /**
  *insertion_sort_list - function
  *@list: V
+ * gestion de NULL
  */
 void insertion_sort_list(listint_t **list)
 {
@@ -11,7 +12,7 @@ void insertion_sort_list(listint_t **list)
 
 	if (k == NULL)
 	{
-		return;
+		NULL;
 	}
 	k = k->next;
 	while (k != NULL)
