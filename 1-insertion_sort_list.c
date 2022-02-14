@@ -18,7 +18,7 @@ void insertion_sort_list(listint_t **list)
 	{
 		i = k;
 		k = k->next;
-		while (i->prev != NULL || i->n < i->prev->n)
+		while (i->prev != NULL && i->n < i->prev->n)
 		{
 			if (i->next != NULL)
 			{
@@ -40,5 +40,4 @@ void insertion_sort_list(listint_t **list)
 			print_list(*list);
 		}
 	}
-
 }
