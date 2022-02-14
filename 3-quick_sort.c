@@ -14,7 +14,7 @@ void quick_sort(int *array, size_t size)
 }
 
 /**
- *partition - This function takes last element as pivot, places
+ *Lomuto - This function takes last element as pivot, places
  *the pivot element at its correct position in sorted array,
  *and places all smaller to left of pivot and all
  *greater elements to right of pivot
@@ -24,7 +24,7 @@ void quick_sort(int *array, size_t size)
  * @size: size of array
  * Return: int
  */
-int partition(int *array, int low, int high, size_t size)
+int Lomuto(int *array, int low, int high, size_t size)
 {
 	int pivot = array[high];
 	int a = low - 1;
@@ -75,9 +75,10 @@ void sort(int *array, int low, int high, size_t size)
 
 	if (low < high)
 	{
-		i = partition(array, low, high, size);
+		i = Lomuto(array, low, high, size);
 
 		sort(array, low, i - 1, size);
 		sort(array, i + 1, high, size);
 	}
+
 }
