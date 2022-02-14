@@ -1,5 +1,16 @@
 #include "sort.h"
 /**
+ *swap - swap two elements
+ *@a: a value
+ *@b: b value
+ */
+void swap(int *a, int *b)
+{
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+/**
  *Lomuto_partition_scheme - This function takes last element as pivot, places
  *the pivot element at its correct position in sorted array,
  *and places all smaller to left of pivot and all
@@ -35,19 +46,6 @@ int Lomuto_partition_scheme(int *array, int low, int high, size_t size)
 	}
 	return (a + 1);
 }
-
-/**
- *swap - swap two elements
- *@a: a value
- *@b: b value
- */
-void swap(int *a, int *b)
-{
-	int temp = *a;
-	*a = *b;
-	*b = temp;
-}
-
 /**
  *sort - sorts an array of integers in ascending order
  * @array: array
